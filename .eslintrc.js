@@ -27,6 +27,9 @@ module.exports = {
 	parser: '@typescript-eslint/parser',
 
 	plugins: ['@typescript-eslint'],
-	rules: {}
+	rules: {
+		'@typescript-eslint/explicit-function-return-type': 0,
+		'@typescript-eslint/no-non-null-assertion': 0
+	}
 };
 
