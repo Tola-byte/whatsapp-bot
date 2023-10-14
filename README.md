@@ -8,7 +8,7 @@
 
 ### Prerequisites
 
-- Docker / Docker Desktop
+- Docker / Docker Desktop.
 - Ngrok
 
 Happy Coding 🚀
