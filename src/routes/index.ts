@@ -1,8 +1,10 @@
-
 import { Router } from 'express';
-import botRouter from './searchQuery';
 
-const myBotRouter = Router();
-myBotRouter.use('/api/v1', botRouter);
+const responseMessage = require("../controllers/WhatsappBot")
 
-export default myBotRouter;
+
+const botRouter = Router();
+
+botRouter.post('/response', responseMessage.handleIncomingResponse);
+
+export default botRouter;
