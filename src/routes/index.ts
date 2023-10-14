@@ -1,10 +1,8 @@
 import { Router } from 'express';
+import { incomingMessageRouter } from './incoming-message.router';
 
-const responseMessage = require("../controllers/WhatsappBot")
+const baseRouter = Router();
 
+baseRouter.use('/api/v1', incomingMessageRouter);
 
-const botRouter = Router();
-
-botRouter.post('/response', responseMessage.handleIncomingResponse);
-
-export default botRouter;
+export default baseRouter;
